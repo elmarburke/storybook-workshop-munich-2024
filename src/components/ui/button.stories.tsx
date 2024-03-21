@@ -81,3 +81,18 @@ export const Icon: Story = {
         children: <UserIcon />,
     },
 }
+
+export const DisabledPrimary: Story = {
+    args: {
+        disabled: true,
+        children: 'Disabled',
+    },
+}
+
+export const DisabledSecondary: Story = {
+    args: {
+        disabled: true,
+        variant: 'secondary',
+        children: 'Disabled',
+    },
+}

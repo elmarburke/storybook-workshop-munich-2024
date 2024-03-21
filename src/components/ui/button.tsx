@@ -5,9 +5,9 @@ import { ButtonHTMLAttributes, FunctionComponent } from 'react'
 
 const variants = {
     default:
-        'bg-slate-900 text-slate-50 shadow hover:bg-slate-900/90 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-50/90',
+        'bg-slate-900 text-slate-50 shadow hover:bg-slate-900/90 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-50/90 disabled:bg-slate-900/50 disabled:dark:bg-slate-50/50 disabled:cursor-not-allowed',
     destructive:
-        'bg-red-500 text-slate-50 shadow-sm hover:bg-red-500/90 dark:bg-red-900 dark:text-slate-50 dark:hover:bg-red-900/90',
+        'bg-red-500 text-slate-50 shadow-sm hover:bg-red-500/90 dark:bg-red-900 dark:text-slate-50 dark:hover:bg-red-900/90 disabled:bg-red-500/50 disabled:dark:bg-red-900/50 disabled:cursor-not-allowed',
     outline:
         'border border-slate-200 bg-white shadow-sm hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:bg-slate-950 dark:hover:bg-slate-800 dark:hover:text-slate-50',
     secondary:
@@ -41,6 +41,7 @@ const Button: FunctionComponent<ButtonProps> = ({
     ...props
 }) => {
     const Comp = asChild ? Slot : 'button'
+
     return (
         <Comp
             className={cn(
